@@ -9,7 +9,7 @@ const Footer = () => {
         <footer>
           <div className="container grid grid-four-column">
             <div className="footer-about">
-              <h3>DailyBazar</h3>
+              <h3>Zappos</h3>
               <p>Discover Endless Possibilities, Shop Your Dreams</p>
             </div>
             <div className="footer-subscribe">
@@ -42,9 +42,7 @@ const Footer = () => {
           <div className="footer-bottom--section">
             <hr />
             <div className="container grid grid-two-column ">
-              <p>
-                @{new Date().getFullYear()} @DailyBazer | No rights reservedz
-              </p>
+              <p>@{new Date().getFullYear()} @Zappos | No rights reserved</p>
               <div>
                 <p>PRIVACY POLICY</p>
                 <p>TERMS & CONDITIONS</p>
@@ -79,7 +77,7 @@ const Wrapper = styled.section`
 
   footer {
     padding: 14rem 0 9rem 0;
-    background-color: ${({ theme }) => theme.colors.footer_bg};
+    background-color: #1f2937;
     h3 {
       color: ${({ theme }) => theme.colors.hr};
       margin-bottom: 2.4rem;

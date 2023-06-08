@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Nav from "./Nav";
 
 const Header = () => {
@@ -24,15 +24,19 @@ const MainHeader = styled.header`
   place-items: center;
   position: relative;
   width: 100%;
-  /* background-color: orange; */
-  box-shadow: 10px 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  @media (max-width: 768px) {
+    padding: 0 2.8rem;
+  }
 `;
 const Contents = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 70vw;
-  /* background-color: yellow; */
+  @media (max-width: 768px) {
+    width: 80vw;
+  }
 `;
 const Logo = styled.p`
   font-size: 50px;
@@ -40,5 +44,8 @@ const Logo = styled.p`
   background-image: linear-gradient(to right, #0099ff, #00cc66);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  @media (max-width: 768px) {
+    font-size: 40px;
+  }
 `;
 export default Header;

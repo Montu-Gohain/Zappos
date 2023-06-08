@@ -5,22 +5,23 @@ import styled from "styled-components";
 const PageNavigation = ({ title }) => {
   return (
     <Wrapper>
-      <NavLink to="/">Home</NavLink>/{title}
+      <NavLink to="/">Home</NavLink>/ {title}
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
-  height: 10rem;
-  background-color: ${({ theme }) => theme.colors.bg};
+  height: 3rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-size: 3.2rem;
-  padding-left: 1.2rem;
-
+  font-size: 1.5rem;
+  padding: 30px 0px 0px 1.2rem;
+  text-decoration: underline;
+  font-style: italic;
   a {
-    font-size: 3.2rem;
+    font-style: normal;
+    font-size: 1.5rem;
   }
 `;
 

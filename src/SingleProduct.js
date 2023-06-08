@@ -85,7 +85,6 @@ const SingleProduct = () => {
                 <p>2 Year Warranty </p>
               </div>
             </div>
-
             <div className="product-data-info">
               <p>
                 Available:
@@ -130,7 +129,7 @@ const Wrapper = styled.section`
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid #ccc;
-      margin-bottom: 1rem;
+      margin-bottom: 1.3rem;
 
       .product-warranty-data {
         text-align: center;

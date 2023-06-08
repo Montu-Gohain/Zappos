@@ -1,5 +1,6 @@
 {
-  "name": "ecom",
+  "name": "zapoos",
+  "description": "Ecom website, its reactive, funcional and presents the core features of Ecommerce website.",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -1,10 +1,14 @@
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../styles/Button";
 
 const HeroSection = ({ myData }) => {
   const { name } = myData;
-
+  const navigate = useNavigate();
+  const gotoProductPage = () => {
+    console.log("You just clicked me");
+    navigate("/products");
+  };
   return (
     <Wrapper>
       <div className="container">
@@ -25,9 +29,7 @@ const HeroSection = ({ myData }) => {
               shopping and let us be your trusted companion on your retail
               journey.
             </p>
-            <NavLink>
-              <Button>Shop now</Button>
-            </NavLink>
+            <Button onClick={gotoProductPage}>Shop now</Button>
           </div>
           <div className="hero-section-image">
             <figure>
@@ -47,6 +49,10 @@ const HeroSection = ({ myData }) => {
 const Wrapper = styled.section`
   padding: 12rem 0;
 
+  @media (max-width: 768px) {
+    padding: 4rem 0;
+  }
+
   img {
     min-width: 10rem;
     height: 10rem;
@@ -64,6 +70,9 @@ const Wrapper = styled.section`
       font-weight: bold;
       font-size: 45px;
       color: #9ca3af;
+      @media (max-width: 768px) {
+        font-size: 35px;
+      }
     }
 
     .intro-data {
@@ -93,6 +102,11 @@ const Wrapper = styled.section`
       left: 50%;
       top: -5rem;
       z-index: -1;
+    }
+    @media screen and (max-width: 768px) {
+      &::after {
+        display: none;
+      }
     }
   }
   .img-style {
