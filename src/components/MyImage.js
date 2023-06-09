@@ -3,18 +3,16 @@ import styled from "styled-components";
 
 const MyImage = ({ imgs = [{ url: "" }] }) => {
   const [mainImage, setMainImage] = useState(imgs[0]);
-
   return (
     <Wrapper>
       <div className="grid grid-four-column">
-        {imgs.map((curElm, index) => {
+        {imgs.map((curElm) => {
           return (
-            <figure>
+            <figure key={curElm.id}>
               <img
                 src={curElm.url}
                 alt={curElm.filename}
                 className="box-image--style"
-                key={index}
                 onClick={() => setMainImage(curElm)}
               />
             </figure>
