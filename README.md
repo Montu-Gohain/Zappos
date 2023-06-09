@@ -27,7 +27,7 @@
 
 <!-- Preview Screen Shots -->
 
-![ProductDetails](https://github.com/Montu-Gohain/Zappos/assets/76866991/66db95fd-93ee-476d-820c-87d3a1413580)
-![Productpage](https://github.com/Montu-Gohain/Zappos/assets/76866991/f4545756-598d-4bd0-9c6b-67d2fae3883a)
 ![Homepage](https://github.com/Montu-Gohain/Zappos/assets/76866991/e4b400e0-4fce-4bd3-b8b1-68271a9eabb2)
+![Productpage](https://github.com/Montu-Gohain/Zappos/assets/76866991/f4545756-598d-4bd0-9c6b-67d2fae3883a)
+![ProductDetails](https://github.com/Montu-Gohain/Zappos/assets/76866991/66db95fd-93ee-476d-820c-87d3a1413580)
 ![cartpage](https://github.com/Montu-Gohain/Zappos/assets/76866991/9b9d0992-c9fa-4efb-9bbd-cca7584ec9bd)
