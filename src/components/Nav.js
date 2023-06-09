@@ -3,8 +3,10 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { FiShoppingCart } from "react-icons/fi";
 import { CgMenu, CgClose } from "react-icons/cg";
+import { useCartContext } from "../context/cart_context";
 
 const Nav = () => {
+  const { cart } = useCartContext();
   const [menuIcon, setMenuIcon] = useState();
 
   const Nav = styled.nav`
@@ -59,14 +61,13 @@ const Nav = () => {
         width: 2.4rem;
         height: 2.4rem;
         position: absolute;
-        background-color: #000;
-        color: #000;
+        background-color: #3b82f6;
+        color: #fff;
         border-radius: 50%;
         display: grid;
         place-items: center;
         top: -20%;
         left: 70%;
-        background-color: ${({ theme }) => theme.colors.helper};
       }
     }
 
@@ -176,20 +177,20 @@ const Nav = () => {
           </li>
           <li>
             <NavLink
-              to="/about"
-              className="navbar-link "
-              onClick={() => setMenuIcon(false)}
-            >
-              About
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
               to="/products"
               className="navbar-link "
               onClick={() => setMenuIcon(false)}
             >
               Products
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/about"
+              className="navbar-link "
+              onClick={() => setMenuIcon(false)}
+            >
+              About
             </NavLink>
           </li>
           <li>
@@ -204,7 +205,7 @@ const Nav = () => {
           <li>
             <NavLink to="/cart" className="navbar-link cart-trolley--link">
               <FiShoppingCart className="cart-trolley" />
-              <span className="cart-total--item">{4}</span>
+              <span className="cart-total--item">{cart.length}</span>
             </NavLink>
           </li>
         </ul>

@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import Nav from "./Nav";
 
 const Header = () => {
@@ -43,6 +43,7 @@ const Logo = styled.p`
   font-weight: 700;
   background-image: linear-gradient(to right, #0099ff, #00cc66);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   @media (max-width: 768px) {
     font-size: 40px;

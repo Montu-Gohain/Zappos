@@ -6,7 +6,6 @@ const HeroSection = ({ myData }) => {
   const { name } = myData;
   const navigate = useNavigate();
   const gotoProductPage = () => {
-    console.log("You just clicked me");
     navigate("/products");
   };
   return (

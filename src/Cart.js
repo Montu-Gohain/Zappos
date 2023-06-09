@@ -4,7 +4,14 @@ import CartItem from "./components/CartItem";
 
 const Cart = () => {
   const { cart } = useCartContext();
-  console.log("🚀 ~ file: Cart.js ~ line 6 ~ Cart ~ cart", cart);
+  if (!cart.length) return <EmptyCart>Your cart is empty😅</EmptyCart>;
+  let totalAmount = 0;
+  if (cart.length) {
+    totalAmount = cart
+      .map((item) => item.price)
+      .reduce((acc, total) => acc + total, 0);
+  }
+  totalAmount /= 100;
   return (
     <Wrapper>
       <div className="container">
@@ -22,13 +29,61 @@ const Cart = () => {
             return <CartItem key={curElem.id} {...curElem} />;
           })}
         </div>
+        <hr />
+        <div className="total-amount">
+          <p>Total Price : ₹{totalAmount}</p>
+          <button
+            onClick={() => alert("Your Items will be delivered soon🐱‍🏍")}
+          >
+            Place Order
+          </button>
+        </div>
       </div>
     </Wrapper>
   );
 };
-
+const EmptyCart = styled.p`
+  height: 50vh;
+  display: grid;
+  place-items: center;
+  font-size: xx-large;
+`;
 const Wrapper = styled.section`
   padding: 9rem 0;
+  min-height: 40vh;
+  .total-amount {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .total-amount > p {
+    font-size: 40px;
+  }
+  .total-amount > button {
+    width: 200px;
+    height: 50px;
+    background-image: linear-gradient(to right, #0099ff, #00cc66);
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 25px;
+    border-radius: 4px;
+  }
+  @media screen and (max-width: 768px) {
+    .total-amount {
+      flex-direction: column;
+    }
+    .total-amount > p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .total-amount > button {
+      width: 150px;
+      height: 40px;
+      font-size: 15px;
+    }
+  }
 
   .grid-four-column {
     grid-template-columns: repeat(4, 1fr);

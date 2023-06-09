@@ -15,7 +15,12 @@ const Footer = () => {
             <div className="footer-subscribe">
               <h3>Subscribe to get important updates</h3>
               <form action="#">
-                <input type="email" name="email" placeholder="YOUR E-MAIL" />
+                <input
+                  type="email"
+                  name="email"
+                  id="email-input"
+                  placeholder="Enter your email"
+                />
                 <input type="submit" id="submit-btn" value="subscribe" />
               </form>
             </div>
@@ -82,6 +87,10 @@ const Wrapper = styled.section`
       color: ${({ theme }) => theme.colors.hr};
       margin-bottom: 2.4rem;
     }
+    #email-input {
+      border-radius: 8px;
+      width: 300px;
+    }
     p {
       color: ${({ theme }) => theme.colors.white};
     }
@@ -106,6 +115,9 @@ const Wrapper = styled.section`
 
   #submit-btn {
     border-radius: 10px;
+    width: 120px;
+    height: 40px;
+    font-size: small;
     background-color: #4f46e5;
   }
 
@@ -113,7 +125,7 @@ const Wrapper = styled.section`
     padding-top: 9rem;
 
     hr {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       color: ${({ theme }) => theme.colors.hr};
       height: 0.1px;
     }
